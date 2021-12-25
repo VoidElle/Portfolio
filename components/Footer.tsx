@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Text, Grid, Stack, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
     return (
         <Container h={"20vh"}>
             <Grid templateColumns={"repeat(3, 1fr)"} textColor="gray.500">

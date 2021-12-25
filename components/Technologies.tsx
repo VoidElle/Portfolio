@@ -5,7 +5,7 @@ interface TechnologiesProps {
   items: string[];
 }
 
-const Technologies = (props: TechnologiesProps) => {
+const Technologies = (props: TechnologiesProps): JSX.Element => {
     return(
         <UnorderedList textColor="gray.500">
             {props.items.map((i: string) => {
