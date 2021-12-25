@@ -8,7 +8,7 @@ interface ProjectProps {
 
 const Project = (props: ProjectProps) => {
     return(
-        <Stack borderWidth="2px" borderColor="gray.300" p={2} rounded="md" pb={6}>
+        <Stack borderWidth="2px" borderColor="gray.300" p={2} rounded="md" pb={6} h={28}>
             <Heading pt={1} fontWeight="regular" fontSize={{ base: "0.8em", md: "0.9em" }}>
                 {props.title}
             </Heading>

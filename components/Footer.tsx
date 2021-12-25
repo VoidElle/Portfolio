@@ -1,14 +1,25 @@
 import React from "react";
-import { Container, Text, Grid, Stack } from "@chakra-ui/react";
+import { Container, Text, Grid, Stack, Link as StyledLink } from "@chakra-ui/react";
+import Link from "next/link";
 
 const Footer = () => {
-    return(
+    return (
         <Container h={"20vh"}>
             <Grid templateColumns={"repeat(3, 1fr)"} textColor="gray.500">
                 <Stack>
-                    <Text>Twitter</Text>
-                    <Text>Github</Text>
-                    <Text>Youtube</Text>
+                    <StyledLink href="https://www.instagram.com/luca.del.corona/" target="_blank">
+                        Instagram
+                    </StyledLink>
+                </Stack>
+                <Stack>
+                    <StyledLink href="https://github.com/VoidElle" target="_blank">
+                        Github
+                    </StyledLink>
+                </Stack>
+                <Stack>
+                    <StyledLink href="https://open.spotify.com/user/lucadelc" target="_blank">
+                        Spotify
+                    </StyledLink>
                 </Stack>
             </Grid>
         </Container>
