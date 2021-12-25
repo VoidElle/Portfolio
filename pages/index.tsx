@@ -6,8 +6,8 @@ import Footer from "../components/Footer";
 
 export default function Home() {
 
-  const width = "80ch";
-  const padding = 12;
+  const width = "90ch";
+  const padding = 10;
 
   return(
       <div>
@@ -67,9 +67,9 @@ export default function Home() {
                   My Projects 🔨
               </Heading>
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
-                  <Project title="Tap It!" description="" />
-                  <Project title="EasyTickets" description="" />
-                  <Project title="Good Games" description="" />
+                  <Project title="Tap It!" url="https://tapit.com/" description="" />
+                  <Project title="EasyTickets" url="https://easytickets.com/" description="" />
+                  <Project title="Good Games" url="https://goodgames.com/" description="" />
               </Grid>
           </Container>
           <Container pt={16} pb={10} maxW={width} px={padding}>
