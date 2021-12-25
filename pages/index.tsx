@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Container, Heading, Text, Grid, Divider, Badge, Flex } from "@chakra-ui/react";
+import { Container, Heading, Text, Grid, Divider, Badge, Flex, Link, Avatar } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
@@ -19,10 +19,13 @@ export default function Home() {
               <meta property="og:title" content="Luca Del Corona | Portfolio" />
               <meta property="og:description" content="Luca Del Corona portfolio" />
               <meta property="og:image" content="https://source.unsplash.com/collection/94997000/" />
-              <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+              <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
           </Head>
-          <Container pt={{ base: "12", md: "32" }} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans" fontSize={{ base: "2.3em", md: "3em" }}>
+          <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
+              <Avatar borderWidth="6px" borderColor="gray.100" h={32} w={32} src="/me.jpg" />
+          </Container>
+          <Container pt={4} maxW={width} px={padding}>
+              <Heading fontFamily="Work Sans, sans-serif" fontSize={{ base: "2.3em", md: "3em" }}>
                   Hi, I&apos;m Luca Del Corona 👋
               </Heading>
               <Text textColor="gray.500">
@@ -31,7 +34,7 @@ export default function Home() {
               </Text>
           </Container>
           <Container pt={16} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans">
+              <Heading fontFamily="Work Sans, sans-serif">
                   About me 👨‍💻
               </Heading>
               <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
@@ -43,7 +46,7 @@ export default function Home() {
               </Text>
           </Container>
           <Container pt={16} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans" mb={1}>My Skills 💪</Heading>
+              <Heading fontFamily="Work Sans, sans-serif" mb={1}>My Skills 💪</Heading>
               <Flex justifyContent="start" alignItems="center" direction="row" wrap="wrap" gap={4}>
                   <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="teal">Dart</Badge>
                   <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="messenger">Flutter</Badge>
@@ -63,7 +66,7 @@ export default function Home() {
               </Flex>
           </Container>
           <Container pt={16} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans" mb={3}>
+              <Heading fontFamily="Work Sans, sans-serif" mb={3}>
                   My Projects 🔨
               </Heading>
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
@@ -73,7 +76,7 @@ export default function Home() {
               </Grid>
           </Container>
           <Container pt={16} pb={10} maxW={width} px={padding}>
-              <Heading pb={2} fontFamily="Work Sans">
+              <Heading pb={2} fontFamily="Work Sans, sans-serif">
                   My Favorite Technologies ⭐️
               </Heading>
               <Technologies
