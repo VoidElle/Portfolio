@@ -13,34 +13,6 @@ import Footer from "../components/Footer";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
 
-interface Certification {
-    title: string,
-    text: string,
-    href: string,
-    src: string
-}
-
-const certifications: Certification[] = [
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    },
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    },
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    }
-];
-
 export default function Home() {
 
   const width = "90ch";
@@ -83,19 +55,6 @@ export default function Home() {
               </Text>
           </Container>
           <Skills padding={padding} width={width} />
-          <Container pt={16} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans, sans-serif" mb={3}>My Certifications 🥇</Heading>
-              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
-                  {
-                      certifications.map((i: Certification) => {
-                          return(
-                              <Certification key={i.title} title={i.title} text={i.text} href={i.href} src={i.src} />
-                          );
-                      })
-                  }
-              </Grid>
-
-          </Container>
           <Container pt={16} maxW={width} px={padding}>
               <Heading fontFamily="Work Sans, sans-serif" mb={3}>
                   Projects 🔨
