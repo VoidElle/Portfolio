@@ -1,6 +1,8 @@
 import Head from "next/head";
-import { Container, Heading, Grid } from "@chakra-ui/react";
+import {Container, Heading, Grid, Divider} from "@chakra-ui/react";
 import Certification from "../components/Certification";
+import Footer from "../components/Footer";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 const width = "90ch";
 const padding = 10;
@@ -33,7 +35,10 @@ const certificationsObj: Certification[] = [
     }
 ];
 
-const certifications = (): JSX.Element => {
+const Certifications = (): JSX.Element => {
+
+    const border = useColorModeValue("gray.300", "gray.600")
+
     return (
         <div>
             <Head>
@@ -60,8 +65,14 @@ const certifications = (): JSX.Element => {
                     }
                 </Grid>
             </Container>
+            <Container pb={10} maxW={width} px={padding}>
+                <Divider />
+            </Container>
+            <Container maxW={width} px={padding}>
+                <Footer />
+            </Container>
         </div>
     );
 };
 
-export default certifications;
+export default Certifications;

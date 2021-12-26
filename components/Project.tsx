@@ -5,6 +5,7 @@ import {
     Text,
     Link
 } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 interface ProjectProps {
   title: string;
@@ -13,8 +14,11 @@ interface ProjectProps {
 }
 
 const Project = (props: ProjectProps): JSX.Element => {
+
+    const border = useColorModeValue("gray.300", "gray.600")
+
     return(
-        <Stack borderWidth="2px" borderColor="gray.300" p={2} rounded="md" pb={6} minHeight={28}>
+        <Stack borderWidth="2px" borderColor={border} p={2} rounded="md" pb={6} minHeight={28}>
             <Heading pt={1} fontWeight="regular" fontSize={{ base: "0.9em", md: "1em" }}>
                 {
                     props.url ?
