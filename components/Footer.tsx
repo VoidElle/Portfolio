@@ -1,42 +1,31 @@
 import React from "react";
-import { Stack, Heading, Text, Link } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
-import Image from 'next/image';
+import {Container, Grid, Stack, Link as StyledLink} from "@chakra-ui/react";
 
-interface CertificationProps {
-    title: string,
-    src: string,
-    children: JSX.Element[],
-    href: string
-}
-
-const Certification = (props: CertificationProps) => {
-
-    const border = useColorModeValue("gray.300", "gray.600");
-
+const Footer = (): JSX.Element => {
     return (
-        <Stack rounded="md" borderWidth="2px" borderColor={border}>
-            <Image
-                src={props.src}
-                height={40}
-                width={80}
-                objectFit={"cover"}
-                alt="Certification Image"
-                loading="lazy"
-                layout="responsive"
-                blurDataURL="/cert_placeholder.jpeg"
-                placeholder="blur"
-            />
-            <Stack px={4} pb={4} pt={2}>
-                <Heading fontWeight="regular" fontSize={{ base: "0.9em", md: "1em" }}>
-                    <Link href={props.href}>{props.title}</Link>
-                </Heading>
-                <Text fontWeight="regular" fontSize={{ base: "0.8em", md: "0.9em" }}>
-                    {props.children}
-                </Text>
-            </Stack>
-        </Stack>
+        <Container h={"20vh"} mb={16}>
+            <Grid templateColumns={"repeat(3, 1fr)"} textColor="gray.500">
+                <Stack>
+                    <StyledLink href="https://www.instagram.com/luca.del.corona/" target="_blank">
+                        Instagram
+                    </StyledLink>
+                </Stack>
+                <Stack>
+                    <StyledLink href="/certifications" passHref>
+                        Certifications
+                    </StyledLink>
+                    <StyledLink href="https://github.com/VoidElle" target="_blank">
+                        Github
+                    </StyledLink>
+                </Stack>
+                <Stack>
+                    <StyledLink href="https://open.spotify.com/user/lucadelc" target="_blank">
+                        Spotify
+                    </StyledLink>
+                </Stack>
+            </Grid>
+        </Container>
     );
 };
 
-export default Certification;
+export default Footer;
