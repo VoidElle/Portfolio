@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import Skills from "../components/Skills";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -68,6 +69,25 @@ export default function Home() {
                     <Project title="Good Games" url="https://goodgames.com/" description="" />
                 </Grid>
             </Container>
+              <Container pt={16} maxW={width} px={padding}>
+                  <Heading pb={2} fontFamily="Work Sans, sans-serif">
+                      Hobbies 🎧
+                  </Heading>
+                  <Text textColor="gray.500" fontSize={{ base: "0.9em", md: "1em" }}>
+                      I spend my free time riding my bike and listening to music. I&apos;m currently planning to expand my garage :)
+                  </Text>
+                  <Grid mt={8} templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }} h={{ base: "120vh", md: "45vh"}} gap={4}>
+                      <Container position="relative" border="2px solid white">
+                          <Image objectFit="cover" src="/me.jpg" layout="fill" alt="Espresso cup" />
+                      </Container>
+                      <Container position="relative" border="2px solid white">
+                          <Image objectFit="cover" src="/me.jpg" layout="fill" alt="Cold brew glass"/>
+                      </Container>
+                      <Container position="relative" border="2px solid white">
+                          <Image objectFit="cover" src="/me.jpg" layout="fill" alt="Toby"/>
+                      </Container>
+                  </Grid>
+              </Container>
             <Container pt={16} pb={10} maxW={width} px={padding}>
                 <Heading pb={2} fontFamily="Work Sans, sans-serif">
                     My Favorite Technologies ⭐️
