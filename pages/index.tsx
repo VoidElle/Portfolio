@@ -12,6 +12,7 @@ import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
 import Skills from "../components/Skills";
 import Certification from "../components/Certification";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
 
@@ -30,6 +31,7 @@ export default function Home() {
               <meta property="og:image" content="https://source.unsplash.com/collection/94997000/" />
               <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
           </Head>
+          <Navbar width={width} padding={padding} />
           <Container pt={{ base: "12", md: "28" }} maxW={width} px={padding}>
               <Avatar borderWidth="6px" borderColor="gray.100" h={32} w={32} src="/me.jpg" />
           </Container>

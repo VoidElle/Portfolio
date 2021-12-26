@@ -16,6 +16,9 @@ const Footer = (): JSX.Element => {
                     </StyledLink>
                 </Stack>
                 <Stack>
+                    <StyledLink href="/certifications" passHref>
+                        Certifications
+                    </StyledLink>
                     <StyledLink href="https://github.com/VoidElle" target="_blank">
                         Github
                     </StyledLink>

@@ -6,12 +6,14 @@ import Document, {
     DocumentContext,
     DocumentInitialProps
 } from "next/document";
+import { ColorModeScript } from "@chakra-ui/react";
+import theme from "../theme";
 
 class MyDocument extends Document {
 
     static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
-        const initalProps: DocumentInitialProps = await Document.getInitialProps(ctx);
-        return { ...initalProps };
+        const initialProps: DocumentInitialProps = await Document.getInitialProps(ctx);
+        return { ...initialProps };
     }
 
     render(): JSX.Element {
@@ -23,8 +25,9 @@ class MyDocument extends Document {
                     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
                 </Head>
                 <body>
-                <Main />
-                <NextScript />
+                    <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+                    <Main />
+                    <NextScript />
                 </body>
             </Html>
         );
