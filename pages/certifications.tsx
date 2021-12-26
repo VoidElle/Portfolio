@@ -3,6 +3,8 @@ import {Container, Heading, Grid, Divider} from "@chakra-ui/react";
 import Certification from "../components/Certification";
 import Footer from "../components/Footer";
 import { useColorModeValue } from "@chakra-ui/color-mode";
+import { motion } from "framer-motion";
+import Navbar from "../components/Navbar";
 
 const width = "90ch";
 const padding = 10;
@@ -42,7 +44,7 @@ const Certifications = (): JSX.Element => {
     return (
         <div>
             <Head>
-                <title>Luca Del Corona | Portfolio</title>
+                <title>Luca Del Corona | Certifications</title>
                 <meta name="description" content="Luca Del Corona portfolio" />
                 <meta property="og:url" content="https://www.lucadelcorona.com" />
                 <meta property="og:type" content="website" />
@@ -51,26 +53,29 @@ const Certifications = (): JSX.Element => {
                 <meta property="og:image" content="https://source.unsplash.com/collection/94997000/" />
                 <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
             </Head>
-            <Container pt={24} maxW={width} px={padding} pb={16}>
-                <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-                    My Certifications 🥇
-                </Heading>
-                <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
-                    {
-                        certificationsObj.map((i: Certification) => {
-                            return (
-                                <Certification key={i.title} title={i.title} text={i.text} href={i.href} src={i.src} />
-                            );
-                        })
-                    }
-                </Grid>
-            </Container>
-            <Container pb={10} maxW={width} px={padding}>
-                <Divider />
-            </Container>
-            <Container maxW={width} px={padding}>
-                <Footer />
-            </Container>
+            <Navbar width={width} padding={padding} />
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.25, type: "tween" }}>
+                <Container pt={24} maxW={width} px={padding} pb={16}>
+                    <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+                        My Certifications 🥇
+                    </Heading>
+                    <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
+                        {
+                            certificationsObj.map((i: Certification) => {
+                                return (
+                                    <Certification key={i.title} title={i.title} text={i.text} href={i.href} src={i.src} />
+                                );
+                            })
+                        }
+                    </Grid>
+                </Container>
+                <Container pb={10} maxW={width} px={padding}>
+                    <Divider />
+                </Container>
+                <Container maxW={width} px={padding}>
+                    <Footer />
+                </Container>
+            </motion.div>
         </div>
     );
 };
