@@ -3,6 +3,36 @@ import { Container, Heading, Text, Grid, Divider, Badge, Flex, Link, Avatar } fr
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
+import Skills from "../components/Skills";
+import Certification from "../components/Certification";
+
+interface Certification {
+    title: string,
+    text: string,
+    href: string,
+    src: string
+}
+
+const certifications: Certification[] = [
+    {
+        title: "Certified Javascript Developer | W3Schools",
+        text: "This certification was given to me by W3Schools. Upon passing their exam.",
+        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
+        src: "/w3-javascript.png"
+    },
+    {
+        title: "Certified Javascript Developer | W3Schools",
+        text: "This certification was given to me by W3Schools. Upon passing their exam.",
+        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
+        src: "/w3-javascript.png"
+    },
+    {
+        title: "Certified Javascript Developer | W3Schools",
+        text: "This certification was given to me by W3Schools. Upon passing their exam.",
+        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
+        src: "/w3-javascript.png"
+    }
+];
 
 export default function Home() {
 
@@ -45,29 +75,23 @@ export default function Home() {
                   I spend my free time riding my bike and listening to music. I&apos;m currently planning to expand my garage :)
               </Text>
           </Container>
+          <Skills padding={padding} width={width} />
           <Container pt={16} maxW={width} px={padding}>
-              <Heading fontFamily="Work Sans, sans-serif" mb={1}>My Skills 💪</Heading>
-              <Flex justifyContent="start" alignItems="center" direction="row" wrap="wrap" gap={4}>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="teal">Dart</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="messenger">Flutter</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">Java</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="red">Javascript</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="cyan">Node.js</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">HTML</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">CSS</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">Docker</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blackAlpha">GitHub Actions</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="purple">Bootstrap</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">MongoDB</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">MySQL</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="cyan">PostgreSQL</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="orange">MariaDB</Badge>
-                  <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="orange">Git</Badge>
-              </Flex>
+              <Heading fontFamily="Work Sans, sans-serif" mb={3}>My Certifications 🥇</Heading>
+              <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
+                  {
+                      certifications.map((i: Certification) => {
+                          return(
+                              <Certification key={i.title} title={i.title} text={i.text} href={i.href} src={i.src} />
+                          );
+                      })
+                  }
+              </Grid>
+
           </Container>
           <Container pt={16} maxW={width} px={padding}>
               <Heading fontFamily="Work Sans, sans-serif" mb={3}>
-                  My Projects 🔨
+                  Projects 🔨
               </Heading>
               <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
                   <Project title="Tap It!" url="https://tapit.com/" description="" />
