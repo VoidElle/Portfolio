@@ -1,5 +1,10 @@
 import React from "react";
-import { Stack, Heading, Text, Link } from "@chakra-ui/react";
+import {
+    Stack,
+    Heading,
+    Text,
+    Link
+} from "@chakra-ui/react";
 
 interface ProjectProps {
   title: string;

@@ -1,5 +1,11 @@
 import React from "react";
-import { Stack, Heading, Text, Image, Link } from "@chakra-ui/react";
+import {
+    Stack,
+    Heading,
+    Text,
+    Image,
+    Link
+} from "@chakra-ui/react";
 
 interface CertificationProps {
     title: string,

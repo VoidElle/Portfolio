@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
+import {
+    Container,
+    Heading,
+    Flex,
+    Badge
+} from "@chakra-ui/react";
 
 interface SkillsProps {
     padding: number,

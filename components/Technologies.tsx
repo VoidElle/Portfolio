@@ -1,5 +1,8 @@
 import React from "react";
-import { UnorderedList, ListItem } from "@chakra-ui/react";
+import {
+    UnorderedList,
+    ListItem
+} from "@chakra-ui/react";
 
 interface TechnologiesProps {
   items: string[];

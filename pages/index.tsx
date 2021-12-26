@@ -1,5 +1,12 @@
 import Head from "next/head";
-import { Container, Heading, Text, Grid, Divider, Badge, Flex, Link, Avatar } from "@chakra-ui/react";
+import {
+    Container,
+    Heading,
+    Text,
+    Grid,
+    Divider,
+    Avatar
+} from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";
@@ -105,12 +112,10 @@ export default function Home() {
               </Heading>
               <Technologies
                   items={[
-                      "Next.js",
-                      "MongoDB",
-                      "React",
-                      "Tailwind CSS",
-                      "ChakraUI",
-                      "Vercel",
+                      "Flutter",
+                      "Spring Boot",
+                      "Jetbrains IDEs",
+                      "Github"
                   ]}
               />
           </Container>
