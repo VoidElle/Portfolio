@@ -64,9 +64,9 @@ export default function Home() {
                     Projects 🔨
                 </Heading>
                 <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
-                    <Project title="Tap It!" url="https://tapit.com/" description="" />
-                    <Project title="EasyTickets" url="https://easytickets.com/" description="" />
-                    <Project title="Good Games" url="https://goodgames.com/" description="" />
+                    <Project title="Tap It!" url="https://tapit.com/" description="Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum" image="/me.jpg" />
+                    <Project title="EasyTickets" url="https://easytickets.com/" description="Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum" image="/me.jpg" />
+                    <Project title="Good Games" url="https://goodgames.com/" description="Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum" image="/me.jpg" />
                 </Grid>
             </Container>
               <Container pt={16} maxW={width} px={padding}>
