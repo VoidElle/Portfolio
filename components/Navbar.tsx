@@ -4,11 +4,29 @@ import Link from "next/link";
 import { SunIcon } from "@chakra-ui/icons";
 import { useColorMode } from "@chakra-ui/color-mode";
 
+/**
+ * The properties of the Navbar component.
+ * @interface NavbarProps
+ */
 interface NavbarProps {
+
+    /**
+     * The width of the Navbar.
+     * @type {string}
+     */
     width: string;
+
+    /**
+     * The padding of the Navbar.
+     * @type {string}
+     */
     padding: number;
 }
 
+/**
+ * The component that represents the Navbar.
+ * @param props The properties of the component
+ */
 const Navbar = (props: NavbarProps) => {
 
     const { toggleColorMode } = useColorMode();

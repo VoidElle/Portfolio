@@ -1,5 +1,5 @@
 import Head from "next/head";
-import {Container, Heading, Text, Grid, Divider, Avatar} from "@chakra-ui/react";
+import { Container, Heading, Text, Grid, Divider, Avatar } from "@chakra-ui/react";
 import Project from "../components/Project";
 import Technologies from "../components/Technologies";
 import Footer from "../components/Footer";

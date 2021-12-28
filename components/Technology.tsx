@@ -2,13 +2,41 @@ import React from "react";
 import { Flex, Text, Heading, Image, Grid } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
+/**
+ * The properties of the technology component.
+ * @interface TechnologyProps
+ */
 interface TechnologyProps {
+
+    /**
+     * The source of the image of the technology.
+     * @type {string}
+     */
     src: string;
+
+    /**
+     * The title of the technology.
+     * @type {string}
+     */
     title: string;
+
+    /**
+     * The alt of the image of the technology.
+     * @type {string}
+     */
     alt: string;
+
+    /**
+     * The description of the technology.
+     * @type {string}
+     */
     description: string;
 }
 
+/**
+ * The component that represents a Technology.
+ * @param props The properties of the component
+ */
 const Technology = (props: TechnologyProps) => {
 
     const bg = useColorModeValue("gray.100", "gray.700");

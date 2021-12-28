@@ -1,6 +1,9 @@
-import {Container, Grid, Stack, Flex, Link as StyledLink} from "@chakra-ui/react";
+import { Container, Grid, Stack, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
 
+/**
+ * The component that represents the footer.
+ */
 const Footer = () => {
     return (
         <Container h={"20vh"} mb={16}>

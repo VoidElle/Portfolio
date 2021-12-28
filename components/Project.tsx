@@ -2,13 +2,41 @@ import React from "react";
 import { Stack, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
+/**
+ * The properties of a project component.
+ * @interface ProjectProps
+ */
 interface ProjectProps {
+
+    /**
+     * The image of the project.
+     * @type {string}
+     */
     image: string;
+
+    /**
+     * The url of the project.
+     * @type {string}
+     */
     url: string;
+
+    /**
+     * The title of the project.
+     * @type {string}
+     */
     title: string;
+
+    /**
+     * The description of the project.
+     * @type {string}
+     */
     description: string;
 }
 
+/**
+ * The component that represents a Project.
+ * @param props The properties of the component
+ */
 const Project = (props: ProjectProps) => {
 
     const border = useColorModeValue("gray.300", "gray.600")

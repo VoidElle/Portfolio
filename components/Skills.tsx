@@ -2,11 +2,29 @@ import React from "react";
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
+/**
+ * The properties of a skill component.
+ * @interface SkillsProps
+ */
 interface SkillsProps {
+
+    /**
+     * The padding of the skill
+     * @type {number}
+     */
     padding: number;
+
+    /**
+     * The width of the skill
+     * @type {string}
+     */
     width: string;
 }
 
+/**
+ * The component that represents a Skill.
+ * @param props The properties of the component
+ */
 const Skills = (props: SkillsProps) => {
 
     const color = useColorModeValue("blackAlpha", "gray")
