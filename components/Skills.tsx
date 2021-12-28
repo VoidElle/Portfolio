@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 

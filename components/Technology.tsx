@@ -1,4 +1,3 @@
-import React from "react";
 import { Flex, Text, Heading, Image, Grid } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 

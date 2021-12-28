@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Heading, Text, Grid, Divider, Link, Flex, Icon } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Head from "next/head";

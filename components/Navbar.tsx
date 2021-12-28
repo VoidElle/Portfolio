@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Flex, Container, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
 import { SunIcon } from "@chakra-ui/icons";
