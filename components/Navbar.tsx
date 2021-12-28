@@ -2,18 +2,19 @@ import React from "react";
 import { Button, Flex, Container, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
 import { SunIcon } from "@chakra-ui/icons";
-import { useColorMode, useColorModeValue } from "@chakra-ui/color-mode";
+import { useColorMode } from "@chakra-ui/color-mode";
 
 interface NavbarProps {
     width: string;
     padding: number;
 }
 
-const Navbar = ({ width, padding }: NavbarProps) => {
+const Navbar = (props: NavbarProps) => {
+
     const { toggleColorMode } = useColorMode();
 
     return (
-        <Container pt={{ base: "12", md: "28" }} maxW={width || "90ch"} px={padding || 6}>
+        <Container pt={{ base: "12", md: "28" }} maxW={props.width || "90ch"} px={props.padding || 6}>
             <Flex justifyContent="space-between" alignItems="center">
                 <Flex>
                     <Link href="/" passHref>

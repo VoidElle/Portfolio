@@ -1,26 +1,14 @@
 import React from "react";
-import {
-    Container,
-    Heading,
-    Text,
-    Grid,
-    Divider,
-    Link,
-    Avatar,
-    Flex,
-    Icon,
-} from "@chakra-ui/react";
+import {Container, Heading, Text, Grid, Divider, Link, Flex, Icon,} from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { useColorModeValue } from "@chakra-ui/color-mode";
-
-const width = "90ch";
-const padding = 10;
+import Footer from '../components/Footer'
 
 const socials = [
     {
-        name: "Instagram 🐦",
+        name: "Instagram 📷",
         href: "https://www.instagram.com/luca.del.corona/",
         description: "Check out my latest photos!",
     },
@@ -30,9 +18,14 @@ const socials = [
         description: "See all of my projects and code.",
     },
     {
+        name: "LinkedIn 💻",
+        href: "https://www.linkedin.com/in/luca-del-corona/",
+        description: "See my professional profile.",
+    },
+    {
         name: "Email ✉️",
         href: "mailto:lucadelc@gmail.com",
-        description: "Send me an email. Whether you're a client or a fan!",
+        description: "Send me an email. Wether you're a client or a fan!",
     },
 ];
 
@@ -42,21 +35,23 @@ interface Social {
     description: string;
 }
 
-const Contacts = () => {
+const Contact = () => {
 
     const bg = useColorModeValue("gray.100", "gray.700");
+    const width = "90ch";
+    const padding = 6;
 
     return (
         <div>
             <Head>
-                <title>Luca Del Corona | Contact</title>
+                <title>Luca Del Corona | Contacts</title>
                 <meta name="description" content="Luca Del Corona portfolio" />
                 <meta property="og:url" content="https://www.lucadelcorona.com" />
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Luca Del Corona | Portfolio" />
                 <meta property="og:description" content="Luca Del Corona portfolio" />
                 <meta property="og:image" content="https://source.unsplash.com/collection/94997000/" />
-                <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+                <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
             </Head>
             <Navbar width={width} padding={padding} />
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.25, type: "tween" }}>
@@ -65,13 +60,13 @@ const Contacts = () => {
                         Contact Me 🌱
                     </Heading>
                 </Container>
-                <Container maxW={"90ch"} px={6} pb={16}>
+                <Container maxW={"90ch"} px={6}>
                     <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
                         {
                             socials.map((i: Social) => {
                                 return (
                                     <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={bg} flexDir="column" key={i.name}>
-                                        <Link href={i.href} target="_blank" w={'full'}>
+                                        <Link href={i.href} target="_blank" w={"full"}>
                                             <Flex rounded="md" justifyContent="space-between" alignItems="start" w={"full"}>
                                                 <Heading fontFamily="Work Sans, sans-serif">
                                                     {i.name}
@@ -92,9 +87,20 @@ const Contacts = () => {
                         }
                     </Grid>
                 </Container>
+                <Container maxW={width} px={padding} py={8}>
+                    <Text textColor="gray.400" fontSize="1.1em">
+                        Feel free to contact me through any of these links!
+                    </Text>
+                </Container>
+                <Container pb={10} maxW={width} px={padding}>
+                    <Divider />
+                </Container>
+                <Container maxW={width} px={padding}>
+                    <Footer />
+                </Container>
             </motion.div>
         </div>
     );
 };
 
-export default Contacts;
+export default Contact;

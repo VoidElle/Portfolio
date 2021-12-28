@@ -1,23 +1,18 @@
 import React from "react";
-import {
-    Container,
-    Heading,
-    Flex,
-    Badge
-} from "@chakra-ui/react";
-import {useColorModeValue} from "@chakra-ui/color-mode";
+import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/color-mode";
 
 interface SkillsProps {
-    padding: number,
-    width: string
+    padding: number;
+    width: string;
 }
 
-const Skills = ({ padding, width }: SkillsProps) => {
+const Skills = (props: SkillsProps) => {
 
-    const color = useColorModeValue("blackAlpha", "gray");
+    const color = useColorModeValue("blackAlpha", "gray")
 
     return (
-        <Container pt={16} maxW={width} px={padding}>
+        <Container pt={16} maxW={props.width} px={props.padding}>
             <Heading fontFamily="Work Sans, sans-serif" mb={1}>
                 My Skills 💪
             </Heading>

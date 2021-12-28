@@ -3,10 +3,10 @@ import { Stack, Heading, Text, Link, Image } from "@chakra-ui/react";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 
 interface ProjectProps {
-  title: string;
-  description: string;
-  image: string;
-  url: string;
+    image: string;
+    url: string;
+    title: string;
+    description: string;
 }
 
 const Project = (props: ProjectProps) => {
@@ -14,7 +14,7 @@ const Project = (props: ProjectProps) => {
     const border = useColorModeValue("gray.300", "gray.600")
 
     return (
-        <Stack borderWidth="2px" borderColor={border} p={2} rounded="md" pb={6} minHeight={28}>
+        <Stack borderWidth="0px" borderColor={border} p={2} rounded="md" pb={6} minHeight={28}>
             {
                 props.image && (
                     <Image borderRadius="md" className="" src={props.image} alt={props.title} />

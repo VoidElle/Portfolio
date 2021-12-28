@@ -1,13 +1,13 @@
 import Head from "next/head";
-import {Container, Heading, Grid, Divider} from "@chakra-ui/react";
+import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
 import Certification from "../components/Certification";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
 
 const width = "90ch";
-const padding = 10;
+const padding = 6;
 
 interface Certification {
     title: string,
@@ -17,29 +17,12 @@ interface Certification {
 }
 
 const certificationsObj: Certification[] = [
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    },
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    },
-    {
-        title: "Certified Javascript Developer | W3Schools",
-        text: "This certification was given to me by W3Schools. Upon passing their exam.",
-        href: "https://courses.w3schools.com/certificates/certified-javascript-developer-539.pdf",
-        src: "/w3-javascript.png"
-    }
+
 ];
 
 const Certifications = (): JSX.Element => {
 
-    const border = useColorModeValue("gray.300", "gray.600")
+    const border = useColorModeValue("gray.300", "gray.600");
 
     return (
         <div>
@@ -51,19 +34,23 @@ const Certifications = (): JSX.Element => {
                 <meta property="og:title" content="Luca Del Corona | Portfolio" />
                 <meta property="og:description" content="Luca Del Corona portfolio" />
                 <meta property="og:image" content="https://source.unsplash.com/collection/94997000/" />
-                <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+                <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon" />
             </Head>
             <Navbar width={width} padding={padding} />
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.25, type: "tween" }}>
-                <Container pt={24} maxW={width} px={padding} pb={16}>
-                    <Heading fontFamily="Work Sans, sans-serif" mb={3}>
+                <Container pt={16} maxW={width} px={padding} pb={16}>
+                    <Heading fontFamily="Work Sans, sans-serif" fontSize={{ base: "2.3em", md: "3em" }}>
                         My Certifications 🥇
                     </Heading>
+                    <Text mb={4} textColor="gray.500">
+                        These are most of the certifications I&apos;ve gotten since starting
+                        my career.
+                    </Text>
                     <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
                         {
                             certificationsObj.map((i: Certification) => {
                                 return (
-                                    <Certification key={i.title} title={i.title} text={i.text} href={i.href} src={i.src} />
+                                    <Certification key={i.title} title={i.title} href={i.href} src={i.src} text={i.text} />
                                 );
                             })
                         }

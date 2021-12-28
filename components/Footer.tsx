@@ -1,27 +1,23 @@
-import React from "react";
-import {Container, Grid, Stack, Link as StyledLink} from "@chakra-ui/react";
+import {Container, Grid, Stack, Flex, Link as StyledLink} from "@chakra-ui/react";
+import Link from "next/link";
 
-const Footer = (): JSX.Element => {
+const Footer = () => {
     return (
         <Container h={"20vh"} mb={16}>
-            <Grid templateColumns={"repeat(3, 1fr)"} textColor="gray.500">
+            <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor="gray.500">
                 <Stack>
-                    <StyledLink href="https://www.instagram.com/luca.del.corona/" target="_blank">
-                        Instagram
-                    </StyledLink>
+                    <StyledLink href="https://github.com/VoidElle">Github</StyledLink>
                 </Stack>
                 <Stack>
-                    <StyledLink href="/certifications" passHref>
-                        Certifications
-                    </StyledLink>
-                    <StyledLink href="https://github.com/VoidElle" target="_blank">
-                        Github
-                    </StyledLink>
+                    <Link href="/certifications" passHref>
+                        <StyledLink>Certifications</StyledLink>
+                    </Link>
+                    <Link href="/contact" passHref>
+                        <StyledLink>Contact</StyledLink>
+                    </Link>
                 </Stack>
                 <Stack>
-                    <StyledLink href="https://open.spotify.com/user/lucadelc" target="_blank">
-                        Spotify
-                    </StyledLink>
+                    <StyledLink href="https://open.spotify.com/user/lucadelc">Spotify</StyledLink>
                 </Stack>
             </Grid>
         </Container>
