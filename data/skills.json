@@ -26,7 +26,7 @@
     },
     {
       "name":  "CSS",
-      "color": "blue"
+      "color": "yellow"
     },
     {
       "name":  "Docker",
@@ -58,7 +58,7 @@
     },
     {
       "name":  "Git",
-      "color": "orange"
+      "color": "messenger"
     }
   ]
 }
