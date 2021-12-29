@@ -8,11 +8,19 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+/**
+ * The width of the page
+ * @type {string}
+ */
+const width = "90ch";
+
+/**
+ * The padding of the page
+ * @type {number}
+ */
+const padding = 6;
+
 export default function Home() {
-
-  const width = "90ch";
-  const padding = 6;
-
   return(
       <div>
           <Head>

@@ -1,7 +1,5 @@
-import { Button, Flex, Container, Link as StyledLink } from "@chakra-ui/react";
+import { Flex, Container, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
-import { SunIcon } from "@chakra-ui/icons";
-import { useColorMode } from "@chakra-ui/color-mode";
 
 /**
  * The properties of the Navbar component.
@@ -27,9 +25,6 @@ interface NavbarProps {
  * @param props The properties of the component
  */
 const Navbar = (props: NavbarProps) => {
-
-    const { toggleColorMode } = useColorMode();
-
     return (
         <Container pt={{ base: "12", md: "28" }} maxW={props.width || "90ch"} px={props.padding || 6}>
             <Flex justifyContent="space-between" alignItems="center">
@@ -49,11 +44,6 @@ const Navbar = (props: NavbarProps) => {
                             Contacts
                         </StyledLink>
                     </Link>
-                </Flex>
-                <Flex>
-                    <Button variant="solid" w={4} onClick={toggleColorMode} outlineColor="transparent">
-                        <SunIcon />
-                    </Button>
                 </Flex>
             </Flex>
         </Container>

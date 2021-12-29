@@ -2,10 +2,38 @@ import { Container, Heading, Text, Grid, Divider, Link, Flex, Icon } from "@chak
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import Footer from '../components/Footer'
 
-const socials = [
+/**
+ * The properties of a social component.
+ * @interface Social
+ */
+interface Social {
+
+    /**
+     * The name of the social media.
+     * @type {string}
+     */
+    name: string;
+
+    /**
+     * The link to the social media.
+     * @type {string}
+     */
+    href: string;
+
+    /**
+     * The description of the social media.
+     * @type {string}
+     */
+    description: string;
+}
+
+/**
+ * The array which contains all the social media.
+ * @type {Social[]}
+ */
+const socials: Social[] = [
     {
         name: "Instagram 📷",
         href: "https://www.instagram.com/luca.del.corona/",
@@ -28,18 +56,28 @@ const socials = [
     },
 ];
 
-interface Social {
-    name: string;
-    href: string;
-    description: string;
-}
+/**
+ * The color of the background
+ * @type {string}
+ */
+const backgroundColor = "gray.100";
 
-const Contact = () => {
+/**
+ * The width of the page
+ * @type {string}
+ */
+const width = "90ch";
 
-    const bg = useColorModeValue("gray.100", "gray.700");
-    const width = "90ch";
-    const padding = 6;
+/**
+ * The padding of the page
+ * @type {number}
+ */
+const padding = 6;
 
+/**
+ * The component that represents a Contacts.
+ */
+const Contacts = () => {
     return (
         <div>
             <Head>
@@ -64,7 +102,7 @@ const Contact = () => {
                         {
                             socials.map((i: Social) => {
                                 return (
-                                    <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={bg} flexDir="column" key={i.name}>
+                                    <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={backgroundColor} flexDir="column" key={i.name}>
                                         <Link href={i.href} target="_blank" w={"full"}>
                                             <Flex rounded="md" justifyContent="space-between" alignItems="start" w={"full"}>
                                                 <Heading fontFamily="Work Sans, sans-serif">
@@ -102,4 +140,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default Contacts;

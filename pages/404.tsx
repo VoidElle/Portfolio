@@ -1,12 +1,26 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import {motion} from "framer-motion";
-import {Container, Divider, Grid, Heading, Text} from "@chakra-ui/react";
+import { motion } from "framer-motion";
+import { Container, Divider, Grid, Heading, Text } from "@chakra-ui/react";
 import Footer from "../components/Footer";
 
+/**
+ * The width of the page
+ * @type {string}
+ */
 const width = "90ch";
+
+/**
+ * The padding of the page
+ * @type {number}
+ */
 const padding = 6;
 
+/**
+ * The 404 page
+ * This page is shown when a user tries to access a page that doesn't exist
+ * @returns {JSX.Element}
+ */
 const NotFound = (): JSX.Element => {
     return (
         <div>

@@ -3,27 +3,64 @@ import { Container, Heading, Grid, Divider, Text } from "@chakra-ui/react";
 import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import { motion } from "framer-motion";
 
+/**
+ * The width of the page
+ * @type {string}
+ */
 const width = "90ch";
+
+/**
+ * The padding of the page
+ * @type {number}
+ */
 const padding = 6;
 
+/**
+ * The properties of the Certifications component.
+ * @interface NavbarProps
+ */
 interface Certification {
-    title: string,
-    text: string,
-    href: string,
-    src: string
+
+    /**
+     * The title of the certification
+     * @type {string}
+     */
+    title: string;
+
+    /**
+     * The text of the certification
+     * @type {string}
+     */
+    text: string;
+
+    /**
+     * The href of the certification
+     * @type {string}
+     */
+    href: string;
+
+    /**
+     * The source of the image of the certification
+     * @type {string}
+     */
+    src: string;
 }
 
+/**
+ * The array which contains the properties of the Certifications component.
+ * @type {Certification[]}
+ */
 const certificationsObj: Certification[] = [
 
 ];
 
+/**
+ * The Certifications component.
+ * @returns {JSX.Element}
+ */
 const Certifications = (): JSX.Element => {
-
-    const border = useColorModeValue("gray.300", "gray.600");
-
     return (
         <div>
             <Head>
