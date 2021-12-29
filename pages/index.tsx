@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import technologies from "../data/technologies.json";
 
 /**
  * The width of the page
@@ -92,52 +93,7 @@ export default function Home() {
                 <Heading pb={2} fontFamily="Work Sans, sans-serif">
                     My Favorite Technologies ⭐️
                 </Heading>
-                <Technologies
-                    items={[
-                        {
-                            name: "Flutter",
-                            description: "Flutter is a framework for developing native apps for iOS, Android, web and desktop",
-                            src: "/img/technologies/flutter.svg",
-                            alt: "Flutter logo"
-                        },
-                        {
-                            name: "Spring",
-                            description: "Spring is an open source framework for developing applications on the Java platform",
-                            src: "/img/technologies/spring.svg",
-                            alt: "Spring logo"
-                        },
-                        {
-                            name: "MongoDB",
-                            description: "MongoDB is a non-relational, document-oriented DBMS. Classified as a NoSQL database",
-                            src: "/img/technologies/mongodb.svg",
-                            alt: "Spring logo"
-                        },
-                        {
-                            name: "Node.js",
-                            description: "Node.js is an event-oriented cross-platform open source runtime system for running JavaScript code",
-                            src: "/img/technologies/node.svg",
-                            alt: "Spring logo"
-                        },
-                        {
-                            name: "Jetbrains IDEs",
-                            description: "JetBrains is a Czech software development company founded in 2000 whose tools are marketed by software developers",
-                            src: "/img/technologies/jetbrains.svg",
-                            alt: "Next.js logo"
-                        },
-                        {
-                            name: "Github",
-                            description: "GitHub is a hosting service for software projects",
-                            src: "/img/technologies/github.svg",
-                            alt: "MongoDB logo"
-                        },
-                        {
-                            name: "Docker",
-                            description: "Docker is an open-source project that automates the process of deploying applications within software containers",
-                            src: "/img/technologies/docker.svg",
-                            alt: "MongoDB logo"
-                        }
-                    ]}
-                />
+                <Technologies items={technologies.list} />
             </Container>
             <Container pb={10} maxW={width} px={padding}>
                 <Divider />

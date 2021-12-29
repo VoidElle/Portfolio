@@ -1,5 +1,4 @@
 import { Container, Heading, Flex, Badge } from "@chakra-ui/react";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 
 /**
  * The properties of a skill component.
@@ -25,9 +24,6 @@ interface SkillsProps {
  * @param props The properties of the component
  */
 const Skills = (props: SkillsProps) => {
-
-    const color = useColorModeValue("blackAlpha", "gray")
-
     return (
         <Container pt={16} maxW={props.width} px={props.padding}>
             <Heading fontFamily="Work Sans, sans-serif" mb={1}>
@@ -42,7 +38,7 @@ const Skills = (props: SkillsProps) => {
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">HTML</Badge>
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">CSS</Badge>
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="blue">Docker</Badge>
-                <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme={color}>GitHub Actions</Badge>
+                <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme={"blackAlpha"}>GitHub Actions</Badge>
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="purple">Bootstrap</Badge>
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="green">MongoDB</Badge>
                 <Badge mx={1} my={1} fontSize={{ base: '0.9em', md: '1em' }} colorScheme="yellow">MySQL</Badge>

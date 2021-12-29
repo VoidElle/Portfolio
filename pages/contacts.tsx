@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Footer from '../components/Footer'
+import socials from "../data/socials.json";
 
 /**
  * The properties of a social component.
@@ -28,33 +29,6 @@ interface Social {
      */
     description: string;
 }
-
-/**
- * The array which contains all the social media.
- * @type {Social[]}
- */
-const socials: Social[] = [
-    {
-        name: "Instagram 📷",
-        href: "https://www.instagram.com/luca.del.corona/",
-        description: "Check out my latest photos!",
-    },
-    {
-        name: "GitHub 👨‍💻",
-        href: "https://github.com/VoidElle",
-        description: "See all of my projects and code.",
-    },
-    {
-        name: "LinkedIn 💻",
-        href: "https://www.linkedin.com/in/luca-del-corona/",
-        description: "See my professional profile.",
-    },
-    {
-        name: "Email ✉️",
-        href: "mailto:lucadelc@gmail.com",
-        description: "Send me an email. Wether you're a client or a fan!",
-    },
-];
 
 /**
  * The color of the background
@@ -100,7 +74,7 @@ const Contacts = () => {
                 <Container maxW={"90ch"} px={6}>
                     <Grid templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap={4}>
                         {
-                            socials.map((i: Social) => {
+                            socials.list.map((i: Social) => {
                                 return (
                                     <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={backgroundColor} flexDir="column" key={i.name}>
                                         <Link href={i.href} target="_blank" w={"full"}>

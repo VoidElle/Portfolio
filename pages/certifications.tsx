@@ -4,6 +4,7 @@ import Certification from "../components/Certification";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { motion } from "framer-motion";
+import certifications from "../data/certifications.json";
 
 /**
  * The width of the page
@@ -49,14 +50,6 @@ interface Certification {
 }
 
 /**
- * The array which contains the properties of the Certifications component.
- * @type {Certification[]}
- */
-const certificationsObj: Certification[] = [
-
-];
-
-/**
  * The Certifications component.
  * @returns {JSX.Element}
  */
@@ -85,7 +78,7 @@ const Certifications = (): JSX.Element => {
                     </Text>
                     <Grid templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4}>
                         {
-                            certificationsObj.map((i: Certification) => {
+                            certifications.list.map((i: Certification) => {
                                 return (
                                     <Certification key={i.title} title={i.title} href={i.href} src={i.src} text={i.text} />
                                 );
