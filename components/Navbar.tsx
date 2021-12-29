@@ -1,5 +1,6 @@
-import { Flex, Container, Link as StyledLink } from "@chakra-ui/react";
+import { Button, Flex, Container, Link as StyledLink } from "@chakra-ui/react";
 import Link from "next/link";
+import { DownloadIcon } from "@chakra-ui/icons";
 
 /**
  * The properties of the Navbar component.
@@ -43,6 +44,15 @@ const Navbar = (props: NavbarProps) => {
                         <StyledLink textColor="gray.600" px={2}>
                             Contacts
                         </StyledLink>
+                    </Link>
+                </Flex>
+                <Flex>
+                    <Link href="/cv.pdf" passHref={true}>
+                        <a target={"_blank"}>
+                            <Button variant="outline" size="sm" rightIcon={<DownloadIcon />} _hover={{ bg: "gray.800", color: "white" }}>
+                                View my CV
+                            </Button>
+                        </a>
                     </Link>
                 </Flex>
             </Flex>
