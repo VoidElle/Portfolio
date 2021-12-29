@@ -50,7 +50,7 @@ const Navbar = (props: NavbarProps) => {
                     <Link href="/cv.pdf" passHref={true}>
                         <a target={"_blank"}>
                             <Button variant="outline" size="sm" rightIcon={<DownloadIcon />} _hover={{ bg: "gray.800", color: "white" }}>
-                                View my CV
+                                CV
                             </Button>
                         </a>
                     </Link>
