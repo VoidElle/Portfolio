@@ -1,0 +1,64 @@
+{
+  "list": [
+    {
+      "name":  "Dart",
+      "color": "teal"
+    },
+    {
+      "name":  "Flutter",
+      "color": "messenger"
+    },
+    {
+      "name":  "Java",
+      "color": "yellow"
+    },
+    {
+      "name":  "Javascript",
+      "color": "red"
+    },
+    {
+      "name":  "Node.js",
+      "color": "cyan"
+    },
+    {
+      "name":  "HTML",
+      "color": "green"
+    },
+    {
+      "name":  "CSS",
+      "color": "blue"
+    },
+    {
+      "name":  "Docker",
+      "color": "blue"
+    },
+    {
+      "name":  "GitHub Actions",
+      "color": "blackAlpha"
+    },
+    {
+      "name":  "Bootstrap",
+      "color": "purple"
+    },
+    {
+      "name":  "MongoDB",
+      "color": "green"
+    },
+    {
+      "name":  "MySQL",
+      "color": "yellow"
+    },
+    {
+      "name":  "PostgreSQL",
+      "color": "cyan"
+    },
+    {
+      "name":  "MariaDB",
+      "color": "orange"
+    },
+    {
+      "name":  "Git",
+      "color": "orange"
+    }
+  ]
+}
