@@ -41,7 +41,7 @@ const Certification = (props: CertificationProps) => {
             <Image roundedTop="md" src={props.src} h={40} w={"full"} objectFit={"cover"} alt="Certification Image"/>
             <Stack px={4} pb={4} pt={2}>
                 <Heading fontWeight="regular" fontSize={{ base: "0.9em", md: "1em" }}>
-                    <Link href={props.href}>
+                    <Link href={props.href} target="_blank">
                         {props.title}
                     </Link>
                 </Heading>
