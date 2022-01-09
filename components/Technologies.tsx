@@ -50,7 +50,7 @@ interface Technology {
  * The component that represents the Technologies.
  * @param props The properties of the component
  */
-const Technologies = (props: TechnologiesProps) => {
+const Technologies = (props: TechnologiesProps): JSX.Element => {
     return (
         <Grid templateColumns={{ base: "1fr", md: "50% 50%" }} gap={2} mt={2} textColor="gray.500">
             {

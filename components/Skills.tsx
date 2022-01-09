@@ -43,7 +43,7 @@ interface Skill {
  * The component that represents a Skill.
  * @param props The properties of the component
  */
-const Skills = (props: SkillsProps) => {
+const Skills = (props: SkillsProps): JSX.Element => {
     return (
         <Container pt={16} maxW={props.width} px={props.padding}>
             <Heading fontFamily="Work Sans, sans-serif" mb={1}>

@@ -10,13 +10,13 @@ import certifications from "../data/certifications.json";
  * The width of the page
  * @type {string}
  */
-const width = "90ch";
+const width: string = "90ch";
 
 /**
  * The padding of the page
  * @type {number}
  */
-const padding = 6;
+const padding: number = 6;
 
 /**
  * The properties of the Certifications component.

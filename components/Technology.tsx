@@ -35,7 +35,7 @@ interface TechnologyProps {
  * The component that represents a Technology.
  * @param props The properties of the component
  */
-const Technology = (props: TechnologyProps) => {
+const Technology = (props: TechnologyProps): JSX.Element => {
     return (
         <Grid bgColor={"gray.100"} p={3} rounded="md" gap={3} placeItems="stretch" templateColumns={props.src ? "1fr 5fr" : "1fr"}>
             {

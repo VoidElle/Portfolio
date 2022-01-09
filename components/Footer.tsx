@@ -4,7 +4,7 @@ import Link from "next/link";
 /**
  * The component that represents the footer.
  */
-const Footer = () => {
+const Footer = (): JSX.Element => {
     return (
         <Container h={"20vh"} mb={16}>
             <Grid pt={8} templateColumns={"repeat(3, 1fr)"} textColor="gray.500">

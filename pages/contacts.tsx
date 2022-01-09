@@ -4,7 +4,6 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import Footer from '../components/Footer'
 import socials from "../data/socials.json";
-
 /**
  * The properties of a social component.
  * @interface Social
@@ -31,27 +30,21 @@ interface Social {
 }
 
 /**
- * The color of the background
- * @type {string}
- */
-const backgroundColor = "gray.100";
-
-/**
  * The width of the page
  * @type {string}
  */
-const width = "90ch";
+const width: string = "90ch";
 
 /**
  * The padding of the page
  * @type {number}
  */
-const padding = 6;
+const padding: number = 6;
 
 /**
  * The component that represents a Contacts.
  */
-const Contacts = () => {
+const Contacts = (): JSX.Element => {
     return (
         <div>
             <Head>
@@ -76,7 +69,7 @@ const Contacts = () => {
                         {
                             socials.list.map((i: Social) => {
                                 return (
-                                    <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={backgroundColor} flexDir="column" key={i.name}>
+                                    <Flex justifyContent="center" alignItems="start" py={3} px={4} bgColor={"gray.100"} flexDir="column" key={i.name}>
                                         <Link href={i.href} target="_blank" w={"full"}>
                                             <Flex rounded="md" justifyContent="space-between" alignItems="start" w={"full"}>
                                                 <Heading fontFamily="Work Sans, sans-serif">

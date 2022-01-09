@@ -25,7 +25,7 @@ interface NavbarProps {
  * The component that represents the Navbar.
  * @param props The properties of the component
  */
-const Navbar = (props: NavbarProps) => {
+const Navbar = (props: NavbarProps): JSX.Element => {
     return (
         <Container pt={{ base: "12", md: "28" }} maxW={props.width || "90ch"} px={props.padding || 6}>
             <Flex justifyContent="space-between" alignItems="center">

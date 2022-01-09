@@ -35,7 +35,7 @@ interface CertificationProps {
  * The component that represents a certification.
  * @param props The properties of the component
  */
-const Certification = (props: CertificationProps) => {
+const Certification = (props: CertificationProps): JSX.Element => {
     return(
         <Stack rounded="md" borderWidth="2px" borderColor={"gray.300"}>
             <Image roundedTop="md" src={props.src} h={40} w={"full"} objectFit={"cover"} alt="Certification Image"/>

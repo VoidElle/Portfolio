@@ -35,7 +35,7 @@ interface ProjectProps {
  * The component that represents a Project.
  * @param props The properties of the component
  */
-const Project = (props: ProjectProps) => {
+const Project = (props: ProjectProps): JSX.Element => {
     return (
         <Stack borderWidth="0px" borderColor={"gray.300"} p={2} rounded="md" pb={6} minHeight={28}>
             {
